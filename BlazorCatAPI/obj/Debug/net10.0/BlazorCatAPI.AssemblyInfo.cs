@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("b87bcd70-c6c6-4f13-a86d-4219fdbfad87")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorCatAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d608c76b0ad8e3bc4b0c6c0472b4bf8fb80f3b73")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorCatAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorCatAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

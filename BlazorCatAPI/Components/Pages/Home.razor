@@ -3,6 +3,7 @@
 @using System.Text.Json.Serialization
 @inject IHttpClientFactory ClientFactory
 @rendermode InteractiveServer
+@inject IConfiguration Configuration
 
 <PageTitle>Cat Search</PageTitle>
 
@@ -42,7 +43,6 @@
 </div>
 
 @code {
-    private const string ApiKey = "";
 
     private string searchTerm = "";
     private string errorMessage = "";
@@ -67,6 +67,9 @@
             var client = ClientFactory.CreateClient();
             
             client.DefaultRequestHeaders.Clear();
+
+            var ApiKey = Configuration["CatApiKey"];
+            
             client.DefaultRequestHeaders.Add("x-api-key", ApiKey);
             
             var url = $"https://api.thecatapi.com/v1/breeds/search?q={searchTerm}";
